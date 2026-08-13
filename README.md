@@ -19,37 +19,37 @@ Desenvolver um sistema com Java e MySQL de uma floricultura para facilitar o reg
 - Ao registrar um produto ele não pode ser nulo
 
 # Script do banco
-CREATE TABLE Clientes 
+CREATE TABLE clientes 
 ( 
- Id INT PRIMARY KEY AUTO_INCREMENT,  
- Nome VARCHAR NOT NULL,  
- Email VARCHAR NOT NULL,  
- CPF CHAR NOT NULL,  
- UNIQUE (Email,CPF)
+ id INT PRIMARY KEY AUTO_INCREMENT,  
+ nome VARCHAR(100) NOT NULL,  
+ email VARCHAR(100) NOT NULL,  
+ cpf CHAR(11) NOT NULL,  
+ UNIQUE (email,cpf)
 ); 
 
-CREATE TABLE Produtos 
+CREATE TABLE produtos 
 ( 
- Id INT PRIMARY KEY AUTO_INCREMENT,  
- Nome VARCHAR NOT NULL,  
- Preco FLOAT NOT NULL,  
- Categoria_id INT NOT NULL,  
+ id INT PRIMARY KEY AUTO_INCREMENT,  
+ nome VARCHAR(100) NOT NULL,  
+ preco DECIMAL(10,2) NOT NULL,  
+ categoria_id INT NOT NULL,  
 ); 
 
-CREATE TABLE Categorias 
+CREATE TABLE categorias 
 ( 
- Id INT PRIMARY KEY AUTO_INCREMENT,  
- Nome VARCHAR NOT NULL,  
+ id INT PRIMARY KEY AUTO_INCREMENT,  
+ nome VARCHAR(100) NOT NULL,  
 ); 
 
-CREATE TABLE Vendas 
+CREATE TABLE vendas 
 ( 
- Id INT PRIMARY KEY AUTO_INCREMENT,  
- Data DATETIME NOT NULL,  
+ id INT PRIMARY KEY AUTO_INCREMENT,  
+ data_venda DATETIME NOT NULL,  
  cliente_id INT NOT NULL,  
  produto_id INT NOT NULL,  
 ); 
 
-ALTER TABLE Produtos ADD FOREIGN KEY(Categoria_id) REFERENCES Categorias (Categoria_id)
-ALTER TABLE Vendas ADD FOREIGN KEY(cliente_id) REFERENCES Clientes (cliente_id)
-ALTER TABLE Vendas ADD FOREIGN KEY(produto_id) REFERENCES Produtos (produto_id)
+ALTER TABLE produtos ADD FOREIGN KEY(categoria_id) REFERENCES categorias (categoria_id)
+ALTER TABLE vendas ADD FOREIGN KEY(cliente_id) REFERENCES clientes (cliente_id)
+ALTER TABLE vendas ADD FOREIGN KEY(produto_id) REFERENCES produtos (produto_id)
