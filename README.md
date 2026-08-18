@@ -1,6 +1,36 @@
 # CRUD-Floricultura
 Projeto de DS com objetivo de criar um sistema para um comércio
 
+# Contribuintes
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/JAOJAO000">
+        <img src="https://github.com/JAOJAO000.png" width="100px;" alt="Foto do Usuário 1"/><br>
+        <sub><b>João Pedro</b></sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/ReisAsdf11">
+        <img src="https://github.com/ReisAsdf11.png" width="100px;" alt="Foto do Usuário 2"/><br>
+        <sub><b>Pedro Reis</b></sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/vitor0930">
+        <img src="https://github.com/vitor0930.png" width="100px;" alt="Foto do Usuário 2"/><br>
+        <sub><b>Vitor Lopes</b></sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/yoyozito">
+        <img src="https://github.com/yoyozito.png" width="100px;" alt="Foto do Usuário 2"/><br>
+        <sub><b>Yohann Montim</b></sub>
+      </a>
+    </td>
+  </tr>
+</table>
+
 # Proposta
 Desenvolver um sistema com Java e MySQL de uma floricultura para facilitar o registro e o cadastro de produtos, vendas, e clientes
 
@@ -47,7 +77,8 @@ CREATE TABLE categorias(
 CREATE TABLE vendas(
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     data_venda DATETIME NOT NULL,
-    cliente_id INT NOT NULL
+    cliente_id INT NOT NULL,
+    cancelada BOOLEAN NOT NULL DEFAULT FALSE
 );
 CREATE TABLE itens_vendas(
     id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
