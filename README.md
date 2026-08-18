@@ -19,6 +19,7 @@ Desenvolver um sistema com Java e MySQL de uma floricultura para facilitar o reg
 - Ao registrar um produto ele não pode ser nulo
 
 # Script do banco
+``` SQL 
 CREATE DATABASE floricultura;
 
 USE floricultura;
@@ -30,7 +31,7 @@ CREATE TABLE clientes (
 	cpf CHAR(11) NOT NULL UNIQUE
 );
 
-CREATE TABLE produtos ( 
+CREATE TABLE produtos (
     id INT PRIMARY KEY AUTO_INCREMENT,
 	nome VARCHAR(100) NOT NULL,
 	preco DECIMAL(10,2) NOT NULL,
@@ -52,3 +53,4 @@ CREATE TABLE vendas (
 ALTER TABLE produtos ADD FOREIGN KEY(categoria_id) REFERENCES categorias (id);
 ALTER TABLE vendas ADD FOREIGN KEY(cliente_id) REFERENCES clientes (id);
 ALTER TABLE vendas ADD FOREIGN KEY(produto_id) REFERENCES produtos (id);
+```
