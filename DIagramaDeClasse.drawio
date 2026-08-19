@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net">
   <diagram name="Página-1" id="NPi7z8HvJ90ccfH6TzGV">
-    <mxGraphModel dx="4738" dy="3558" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2438" dy="2153" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -35,22 +35,13 @@
           <mxGeometry height="130" width="190" x="730" y="-190" as="geometry" />
         </mxCell>
         <mxCell id="g9VMg15OsVPA8MV6zUZY-21" parent="1" style="text;align=center;fontStyle=1;verticalAlign=middle;spacingLeft=3;spacingRight=3;strokeColor=none;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;" value="&lt;span style=&quot;font-weight: normal;&quot;&gt;T&lt;/span&gt;" vertex="1">
-          <mxGeometry height="30" width="30" x="470" y="-440" as="geometry" />
+          <mxGeometry height="30" width="30" x="574" y="-500" as="geometry" />
         </mxCell>
         <mxCell id="g9VMg15OsVPA8MV6zUZY-22" parent="1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;ProdutoDAOImpl&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;+ inserir(Produto): boolean&lt;br&gt;+ excluir(Produto): boolean&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;+ atualizar(Produto): boolean&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;+ buscarPorId(int) : Produto&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;+ listarTodos(): List &amp;lt;Produto&amp;gt;&lt;/p&gt;" vertex="1">
           <mxGeometry height="130" width="190" x="520" y="-190" as="geometry" />
         </mxCell>
         <mxCell id="g9VMg15OsVPA8MV6zUZY-23" parent="1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;ItemVendaDAOImpl&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;+ inserir(ItemVenda): boolean&lt;br&gt;+ excluir(ItemVenda): boolean&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;+ atualizar(ItemVenda): boolean&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;+ buscarPorId(int) : ItemVenda&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;+ listarTodos(): List &amp;lt;ItemVenda&amp;gt;&lt;/p&gt;" vertex="1">
           <mxGeometry height="130" width="190" x="310" y="-190" as="geometry" />
-        </mxCell>
-        <mxCell id="g9VMg15OsVPA8MV6zUZY-24" edge="1" parent="1" source="xX2JmspMphpcwhGJnmQc-1" style="endArrow=none;dashed=1;html=1;rounded=0;exitX=0.859;exitY=-0.001;exitDx=0;exitDy=0;exitPerimeter=0;" value="">
-          <mxGeometry height="50" relative="1" width="50" as="geometry">
-            <Array as="points">
-              <mxPoint x="473.21" y="-410" />
-            </Array>
-            <mxPoint x="450" y="-360" as="sourcePoint" />
-            <mxPoint x="500" y="-410" as="targetPoint" />
-          </mxGeometry>
         </mxCell>
         <mxCell id="g9VMg15OsVPA8MV6zUZY-25" parent="1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;VendaDAO&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ inserir(Venda): boolean&lt;br&gt;+ cancelar(Venda): boolean&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ buscarPorId(int) : Venda&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ listarTodos(): List &amp;lt;Venda&amp;gt;&lt;/p&gt;" vertex="1">
           <mxGeometry height="140" width="190" x="-155" y="-500" as="geometry" />
@@ -178,6 +169,16 @@
           <mxGeometry relative="1" width="160" as="geometry">
             <mxPoint x="970" y="-30" as="sourcePoint" />
             <mxPoint x="1158" y="90" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cBK0gnwtdlAspzJPrOcG-1" edge="1" parent="1" source="xX2JmspMphpcwhGJnmQc-1" style="endArrow=none;dashed=1;html=1;rounded=0;exitX=0.995;exitY=0.288;exitDx=0;exitDy=0;exitPerimeter=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="590" y="-460" />
+              <mxPoint x="570" y="-460" />
+            </Array>
+            <mxPoint x="520" y="-450" as="sourcePoint" />
+            <mxPoint x="570" y="-500" as="targetPoint" />
           </mxGeometry>
         </mxCell>
       </root>
