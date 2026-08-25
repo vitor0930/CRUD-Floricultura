@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net">
   <diagram name="Página-1" id="NPi7z8HvJ90ccfH6TzGV">
-    <mxGraphModel dx="2438" dy="2153" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="4362" dy="3112" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -179,6 +179,80 @@
             </Array>
             <mxPoint x="520" y="-450" as="sourcePoint" />
             <mxPoint x="570" y="-500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5N2NewYQJsqcGSxTCctW-1" parent="1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;TelaInicial&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;- btnCliente: JButton&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;- btnVenda: JButton&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;- btnProduto: JButton&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;- btnCategoria: JButton&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- irParaCliente(): JButton&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- IrParaProduto(): JButton&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- irParaVenda(): JButton&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- irParaCategoria(): JButton&lt;/p&gt;" vertex="1">
+          <mxGeometry height="169" width="160" x="460" y="-1169" as="geometry" />
+        </mxCell>
+        <mxCell id="5N2NewYQJsqcGSxTCctW-2" parent="1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;TelaCliente&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- nome: JTextField&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- email: JTextField&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- cpf: JTextField&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- btnCadastrar: JButton&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- usuarioDAO: UsuarioDAOImpl&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- cadastrar(): void&lt;/p&gt;" vertex="1">
+          <mxGeometry height="140" width="180" x="100" y="-770" as="geometry" />
+        </mxCell>
+        <mxCell id="5N2NewYQJsqcGSxTCctW-5" parent="1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;TelaVenda&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- produto: JComboBox&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- quantidade: JTextField&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- itens: JTextField&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- btnAddCarrinho: JButton&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- btnFinalizar: JButton&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- adicionar(): void&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- finalizar(): void&lt;/p&gt;" vertex="1">
+          <mxGeometry height="150" width="160" x="429" y="-750" as="geometry" />
+        </mxCell>
+        <mxCell id="5N2NewYQJsqcGSxTCctW-6" parent="1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;TelaProduto&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- nome: JTextField&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- preco: JTextField&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- categoria: JComboBox&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- btnCadastrar: JButton&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- cadastrar(): void&lt;/p&gt;" vertex="1">
+          <mxGeometry height="140" width="160" x="645" y="-750" as="geometry" />
+        </mxCell>
+        <mxCell id="5N2NewYQJsqcGSxTCctW-7" parent="1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;TelaCategoria&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- nome: JTextField&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- btnCadastrar: JButton&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- cadastrar(): void&lt;/p&gt;" vertex="1">
+          <mxGeometry height="90" width="160" x="860" y="-750" as="geometry" />
+        </mxCell>
+        <mxCell id="5N2NewYQJsqcGSxTCctW-8" edge="1" parent="1" source="5N2NewYQJsqcGSxTCctW-2" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="g9VMg15OsVPA8MV6zUZY-13" value="Use">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="210" y="-520" as="sourcePoint" />
+            <mxPoint x="370" y="-520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5N2NewYQJsqcGSxTCctW-9" edge="1" parent="1" source="5N2NewYQJsqcGSxTCctW-5" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;edgeStyle=entityRelationEdgeStyle;elbow=vertical;" target="g9VMg15OsVPA8MV6zUZY-15" value="Use">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="743" y="-520" as="sourcePoint" />
+            <mxPoint x="700" y="-100" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5N2NewYQJsqcGSxTCctW-10" edge="1" parent="1" source="5N2NewYQJsqcGSxTCctW-6" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;elbow=vertical;entryX=0.75;entryY=0;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" target="g9VMg15OsVPA8MV6zUZY-23" value="Use">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <Array as="points">
+              <mxPoint x="670" y="-610" />
+              <mxPoint x="670" y="-230" />
+              <mxPoint x="452.5" y="-230" />
+            </Array>
+            <mxPoint x="1299" y="-490" as="sourcePoint" />
+            <mxPoint x="810" y="-95" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5N2NewYQJsqcGSxTCctW-11" edge="1" parent="1" source="5N2NewYQJsqcGSxTCctW-6" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;elbow=vertical;entryX=0.902;entryY=0.018;entryDx=0;entryDy=0;entryPerimeter=0;" target="g9VMg15OsVPA8MV6zUZY-22" value="Use">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="1429" y="-460" as="sourcePoint" />
+            <mxPoint x="940" y="-65" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5N2NewYQJsqcGSxTCctW-12" edge="1" parent="1" source="5N2NewYQJsqcGSxTCctW-1" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;entryX=0.55;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;exitX=-0.025;exitY=0.6;exitDx=0;exitDy=0;exitPerimeter=0;" target="5N2NewYQJsqcGSxTCctW-2" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <Array as="points">
+              <mxPoint x="200" y="-1067.6" />
+            </Array>
+            <mxPoint x="30" y="-770" as="sourcePoint" />
+            <mxPoint x="190" y="-770" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5N2NewYQJsqcGSxTCctW-13" edge="1" parent="1" source="5N2NewYQJsqcGSxTCctW-1" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0.675;entryY=-0.007;entryDx=0;entryDy=0;entryPerimeter=0;" target="5N2NewYQJsqcGSxTCctW-6" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="650" y="-1030" as="sourcePoint" />
+            <mxPoint x="810" y="-1030" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5N2NewYQJsqcGSxTCctW-14" edge="1" parent="1" source="5N2NewYQJsqcGSxTCctW-1" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0;exitY=0.75;exitDx=0;exitDy=0;" target="5N2NewYQJsqcGSxTCctW-5" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <Array as="points">
+              <mxPoint x="390" y="-1040" />
+            </Array>
+            <mxPoint x="517" y="-958" as="sourcePoint" />
+            <mxPoint x="260" y="-660" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5N2NewYQJsqcGSxTCctW-15" edge="1" parent="1" source="5N2NewYQJsqcGSxTCctW-1" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;exitX=0.994;exitY=0.87;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitPerimeter=0;" target="5N2NewYQJsqcGSxTCctW-7" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="760" y="-910" as="sourcePoint" />
+            <mxPoint x="893" y="-619" as="targetPoint" />
           </mxGeometry>
         </mxCell>
       </root>
