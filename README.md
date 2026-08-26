@@ -35,19 +35,35 @@ Projeto de DS com objetivo de criar um sistema para um comércio
 Desenvolver um sistema com Java e MySQL de uma floricultura para facilitar o registro e o cadastro de produtos, vendas, e clientes
 
 # Escopo do Sistema
-## Requisitos Funcionais
-- Cadastrar clientes
-- Registrar vendas
-- Registrar produtos
-- Controle de estoque
-
-## Requisitos Não Funcionais
-- E-mails devem ser únicos e válidos
-- O sistema deve usar uma timestamp ao realizar uma venda
-- Deve-se ter apenas um registro por cliente
-- O preço do produto não pode ser 0.00
-- Ao registrar um produto ele não pode ser nulo
-- Vendas não podem ser excluídas ou alteradas, apenas canceladas
+## Requisitos Funcionais (RF)
+ 
+| Código | Descrição |
+|--------|-----------|
+| RF01 | Cadastrar clientes |
+| RF02 | Registrar vendas |
+| RF03 | Registrar produtos |
+| RF04 | Controlar estoque |
+| RF05 | Cancelar venda |
+ 
+## Regras de Negócio (RN)
+ 
+| Código | Descrição |
+|--------|-----------|
+| RN01 | O e-mail do cliente deve ser único e válido |
+| RN02 | Deve haver apenas um registro por cliente |
+| RN03 | O preço do produto não pode ser 0.00 |
+| RN04 | Um produto não pode ser registrado com dados nulos/obrigatórios ausentes |
+| RN05 | Toda venda deve registrar automaticamente a data/hora (timestamp) no momento da criação |
+| RN06 | Vendas não podem ser excluídas ou alteradas após criadas — apenas canceladas (o cancelamento deve ser um status, não uma exclusão) |
+| RN07 | Uma venda cancelada deve reverter o estoque dos produtos envolvidos |
+| RN08 | O estoque deve ser reduzido automaticamente ao registrar uma venda |
+ 
+## Requisitos Não Funcionais (RNF)
+ 
+| Código | Descrição |
+|--------|-----------|
+| RNF01 | O sistema deve ser executado em ambiente desktop (swing) com conexão MySQL local |
+| RNF02 | A interface deve seguir um padrão visual consistente entre todas as telas |
 
 # Script do banco
 ``` SQL 
