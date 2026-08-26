@@ -97,3 +97,6 @@ ALTER TABLE
 ALTER TABLE
     itens_vendas ADD CONSTRAINT itens_vendas_produto_id_foreign FOREIGN KEY(produto_id) REFERENCES produtos(id);
 ```
+
+# Diagrama de classes
+![Diagrama](images/DIagramaDeClasse.drawio.png)
