@@ -47,6 +47,7 @@ Desenvolver um sistema com Java e MySQL de uma floricultura para facilitar o reg
 - Deve-se ter apenas um registro por cliente
 - O preço do produto não pode ser 0.00
 - Ao registrar um produto ele não pode ser nulo
+- Vendas não podem ser excluídas ou alteradas, apenas canceladas
 
 # Script do banco
 ``` SQL 
