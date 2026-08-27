@@ -42,13 +42,18 @@ Desenvolver um sistema com Java e MySQL de uma floricultura para facilitar o reg
 - Controlar estoque
 - Cancelar vendas
 
-## Funcionalidades ausentes
-- Emissão de nota fiscal eletrônica
-- Conexão com sistemas de pagamento
-- Relatórios financeiros avançados
+## Funcionalidades fora do escopo
+- Não haverá emissão de nota fiscal eletrônica
+- Não haverá conexão com sistemas de pagamento
+- Não haverá relatórios financeiros avançados
 
 ## Usuários
 - Operador de caixa
+
+## Tecnologias
+- Java
+- Swing
+- MySQL
 
 ## Restrições
 - Sistema de uso local
