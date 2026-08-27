@@ -34,7 +34,26 @@ Projeto de DS com objetivo de criar um sistema para um comércio
 # Proposta
 Desenvolver um sistema com Java e MySQL de uma floricultura para facilitar o registro e o cadastro de produtos, vendas, e clientes
 
-# Escopo do Sistema
+# Escopo do sistema
+## Funcionalidades presentes
+- Cadastrar clientes
+- Registrar vendas
+- Registrar produtos
+- Controlar estoque
+- Cancelar vendas
+
+## Funcionalidades ausentes
+- Emissão de nota fiscal eletrônica
+- Conexão com sistemas de pagamento
+- Relatórios financeiros avançados
+
+## Usuários
+- Operador de caixa
+
+## Restrições
+- Sistema de uso local
+
+# Requisitos do Sistema
 ## Requisitos Funcionais (RF)
  
 | Código | Descrição |
