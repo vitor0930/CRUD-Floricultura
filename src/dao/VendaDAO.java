@@ -1,6 +1,6 @@
-package DAO;
+package dao;
 
-import Model.Venda;
+import model.Venda;
 
 import java.util.List;
 

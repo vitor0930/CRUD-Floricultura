@@ -1,4 +1,4 @@
-package Model;
+package model;
 
 public class Cliente {
     int id;
@@ -8,6 +8,10 @@ public class Cliente {
 
     public int getId() {
         return id;
+    }
+
+    public void setId(int id){
+        this.id = id;
     }
 
     public String getNome() {
@@ -34,9 +38,26 @@ public class Cliente {
         this.email = email;
     }
 
-    public Cliente(String nome, String cpf, String email) {
+    public Cliente(int id, String nome, String email, String cpf) {
+        this.id = id;
         this.nome = nome;
-        this.cpf = cpf;
         this.email = email;
+        this.cpf = cpf;
+    }
+
+    public Cliente(String nome, String email, String cpf) {
+        this.nome = nome;
+        this.email = email;
+        this.cpf = cpf;
+    }
+
+    @Override
+    public String toString() {
+        return "Cliente{" +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                ", cpf='" + cpf + '\'' +
+                ", email='" + email + '\'' +
+                '}';
     }
 }
