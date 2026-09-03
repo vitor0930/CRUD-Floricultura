@@ -16,15 +16,10 @@ public class VendaDAOImpl implements VendaDAO {
     public boolean salvar(Venda venda) {
         String sql = "INSERT INTO vendas (data_venda, cliente_id) VALUES (?, ?);";
         try (Connection conn = ConnectionFactory.getConnection();
-             PreparedStatement stmt = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
             stmt.setTimestamp(1, Timestamp.valueOf(LocalDateTime.now()));
             stmt.setInt(2, venda.getCliente().getId());
-            stmt.executeUpdate();
-            try (ResultSet keys = stmt.getGeneratedKeys()) {
-                if (keys.next()) {
-                    venda.setId(keys.getInt(1));
-                }
-            }
+            stmt.execute();
             return true;
         } catch (Exception e) {
             e.printStackTrace();
