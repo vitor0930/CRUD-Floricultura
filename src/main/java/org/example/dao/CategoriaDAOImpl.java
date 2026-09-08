@@ -9,10 +9,10 @@ import java.util.List;
 import org.example.config.ConnectionFactory;
 import org.example.model.Categoria;
 
-public class CategoriaDAOImpl implements CategoriaDAO{
+public class CategoriaDAOImpl implements DAO<Categoria>{
 
     @Override 
-    public boolean inserir(Categoria categoria) {
+    public boolean salvar(Categoria categoria) {
         String sql = "INSERT INTO categorias (nome) VALUES (?)";
         try (Connection conn = ConnectionFactory.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
@@ -27,7 +27,7 @@ public class CategoriaDAOImpl implements CategoriaDAO{
     }
 
     @Override 
-    public boolean excluir(Categoria categoria) {
+    public boolean deletar(Categoria categoria) {
         String sql = "DELETE FROM categorias WHERE id = ?;";
         try (Connection conn = ConnectionFactory.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
