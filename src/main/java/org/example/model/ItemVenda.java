@@ -10,18 +10,18 @@ public class ItemVenda {
     private int quantidade;
 
     public ItemVenda(int id, Produto produto, Venda venda, BigDecimal precoUnitario, int quantidade){
-        id = this.id;
-        produto = this.produto;
-        venda = this.venda;
-        precoUnitario = this.precoUnitario;
-        quantidade = this.quantidade;
+        this.id = id;
+        this.produto = produto;
+        this.venda = venda;
+        this.precoUnitario = precoUnitario;
+        this.quantidade = quantidade;
     }
 
     public ItemVenda(Produto produto, Venda venda, BigDecimal precoUnitario, int quantidade){
-        produto = this.produto;
-        venda = this.venda;
-        precoUnitario = this.precoUnitario;
-        quantidade = this.quantidade;
+        this.produto = produto;
+        this.venda = venda;
+        this.precoUnitario = precoUnitario;
+        this.quantidade = quantidade;
     }
 
     public int getId() {

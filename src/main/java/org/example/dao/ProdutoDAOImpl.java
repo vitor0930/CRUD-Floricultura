@@ -14,13 +14,64 @@ public class ProdutoDAOImpl implements DAO<Produto> {
     public boolean salvar(Produto produto) {
         String sql = "INSERT INTO produtos (nome, preco, categoria_id, quantidade) VALUES (?, ?, ?, ?);";
         try (Connection conn = ConnectionFactory.getConnection();
-             PreparedStatement stmt = conn.prepareStatement(sql)) {
+             PreparedStatement stmt = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
             stmt.setString(1, produto.getNome());
             stmt.setDouble(2, produto.getPreco());
             stmt.setInt(3, produto.getCategoria().getId());
             stmt.setInt(4, produto.getQuantidade());
             stmt.execute();
+            try (ResultSet rs = stmt.getGeneratedKeys()) {
+                if (rs.next()) {
+                    produto.setId(rs.getInt(1));
+                }
+            }
             return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    public boolean reduzirEstoque(int produtoId, int quantidade) {
+        if (quantidade <= 0) {
+            return false;
+        }
+        String sql = "UPDATE produtos SET quantidade = quantidade - ? WHERE id = ? AND quantidade >= ?;";
+        try (Connection conn = ConnectionFactory.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setInt(1, quantidade);
+            stmt.setInt(2, produtoId);
+            stmt.setInt(3, quantidade);
+            return stmt.executeUpdate() > 0;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    public boolean reporEstoque(int produtoId, int quantidade) {
+        if (quantidade <= 0) {
+            return false;
+        }
+        String sql = "UPDATE produtos SET quantidade = quantidade + ? WHERE id = ?;";
+        try (Connection conn = ConnectionFactory.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setInt(1, quantidade);
+            stmt.setInt(2, produtoId);
+            return stmt.executeUpdate() > 0;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    public boolean atualizarEstoque(int produtoId, int novaQuantidade) {
+        String sql = "UPDATE produtos SET quantidade = ? WHERE id = ?;";
+        try (Connection conn = ConnectionFactory.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setInt(1, novaQuantidade);
+            stmt.setInt(2, produtoId);
+            return stmt.executeUpdate() > 0;
         } catch (Exception e) {
             e.printStackTrace();
         }
