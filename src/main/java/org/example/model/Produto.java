@@ -5,6 +5,7 @@ public class Produto {
     String nome;
     double preco;
     Categoria categoria;
+    int quantidade;
 
     public int getId() {
         return id;
@@ -38,17 +39,27 @@ public class Produto {
         this.categoria = categoria;
     }
 
-    public Produto(int id, String nome, double preco, Categoria categoria) {
+    public int getQuantidade() {
+        return quantidade;
+    }
+
+    public void setQuantidade(int quantidade) {
+        this.quantidade = quantidade;
+    }
+
+    public Produto(int id, String nome, double preco, Categoria categoria, int quantidade) {
         this.id = id;
         this.nome = nome;
         this.preco = preco;
         this.categoria = categoria;
+        this.quantidade = quantidade;
     }
 
-    public Produto(String nome, double preco, Categoria categoria) {
+    public Produto(String nome, double preco, Categoria categoria, int quantidade) {
         this.nome = nome;
         this.preco = preco;
         this.categoria = categoria;
+        this.quantidade = quantidade;
     }
 
     @Override
@@ -58,6 +69,7 @@ public class Produto {
                 ", nome='" + nome + '\'' +
                 ", preco=" + preco +
                 ", categoria=" + categoria +
+                ", quantidade=" + quantidade +
                 '}';
     }
 }

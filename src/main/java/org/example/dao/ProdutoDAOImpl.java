@@ -12,12 +12,13 @@ public class ProdutoDAOImpl implements DAO<Produto> {
 
     @Override
     public boolean salvar(Produto produto) {
-        String sql = "INSERT INTO produtos (nome, preco, categoria_id) VALUES (?, ?, ?);";
+        String sql = "INSERT INTO produtos (nome, preco, categoria_id, quantidade) VALUES (?, ?, ?, ?);";
         try (Connection conn = ConnectionFactory.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
             stmt.setString(1, produto.getNome());
             stmt.setDouble(2, produto.getPreco());
             stmt.setInt(3, produto.getCategoria().getId());
+            stmt.setInt(4, produto.getQuantidade());
             stmt.execute();
             return true;
         } catch (Exception e) {
@@ -42,13 +43,14 @@ public class ProdutoDAOImpl implements DAO<Produto> {
 
     @Override
     public boolean atualizar(Produto produto) {
-        String sql = "UPDATE produtos SET nome = ?, preco = ?, categoria_id = ? WHERE id = ?;";
+        String sql = "UPDATE produtos SET nome = ?, preco = ?, categoria_id = ?, quantidade = ? WHERE id = ?;";
         try (Connection conn = ConnectionFactory.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
             stmt.setString(1, produto.getNome());
             stmt.setDouble(2, produto.getPreco());
             stmt.setInt(3, produto.getCategoria().getId());
-            stmt.setInt(4, produto.getId());
+            stmt.setInt(4, produto.getQuantidade());
+            stmt.setInt(5, produto.getId());
             stmt.executeUpdate();
             return true;
         } catch (Exception e) {
@@ -69,7 +71,8 @@ public class ProdutoDAOImpl implements DAO<Produto> {
                 double preco = rs.getDouble("preco");
                 int categoriaId = rs.getInt("categoria_id");
                 Categoria categoria = new CategoriaDAOImpl().buscarPorId(categoriaId);
-                return new Produto(id, nome, preco, categoria);
+                int quantidade = rs.getInt("quantidade");
+                return new Produto(id, nome, preco, categoria, quantidade);
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -90,7 +93,8 @@ public class ProdutoDAOImpl implements DAO<Produto> {
                 double preco = rs.getDouble("preco");
                 int categoriaId = rs.getInt("categoria_id");
                 Categoria categoria = new CategoriaDAOImpl().buscarPorId(categoriaId);
-                produtos.add(new Produto(id, nome, preco, categoria));
+                int quantidade = rs.getInt("quantidade");
+                produtos.add(new Produto(id, nome, preco, categoria, quantidade));
             }
             return produtos;
         } catch (Exception e) {
