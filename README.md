@@ -109,7 +109,8 @@ CREATE TABLE produtos(
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
     preco DECIMAL(10, 2) NOT NULL,
-    categoria_id INT NOT NULL
+    categoria_id INT NOT NULL,
+    quantidade INT NOT NULL
 );
 CREATE TABLE categorias(
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
