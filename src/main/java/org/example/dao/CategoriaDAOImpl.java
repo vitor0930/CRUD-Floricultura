@@ -87,4 +87,19 @@ public class CategoriaDAOImpl implements DAO<Categoria>{
             }
             return null;
     }
+
+    public Categoria buscarPorNome(String nome) {
+        String sql = "SELECT * FROM categorias WHERE nome = ?;";
+        try (Connection conn = ConnectionFactory.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setString(1, nome);
+            ResultSet rs = stmt.executeQuery();
+            if (rs.next()) {
+                return new Categoria(rs.getInt("id"), rs.getString("nome"));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 }
