@@ -93,4 +93,34 @@ public class ClienteDAOImpl implements DAO<Cliente> {
         }
         return null;
     }
+
+    public Cliente buscarPorCpf(String cpf) {
+        String sql = "SELECT * FROM clientes WHERE cpf = ?;";
+        try (Connection conn = ConnectionFactory.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setString(1, cpf);
+            ResultSet rs = stmt.executeQuery();
+            if (rs.next()) {
+                return new Cliente(rs.getInt("id"), rs.getString("nome"), rs.getString("email"), rs.getString("cpf"));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public Cliente buscarPorEmail(String email) {
+        String sql = "SELECT * FROM clientes WHERE email = ?;";
+        try (Connection conn = ConnectionFactory.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setString(1, email);
+            ResultSet rs = stmt.executeQuery();
+            if (rs.next()) {
+                return new Cliente(rs.getInt("id"), rs.getString("nome"), rs.getString("email"), rs.getString("cpf"));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 }
