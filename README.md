@@ -140,4 +140,4 @@ ALTER TABLE
 ```
 
 # Diagrama de classes
-![Diagrama](images/DIagramaDeClasse.drawio.png)
+![Diagrama](images/DiagramaDeClasse.drawio.png)
