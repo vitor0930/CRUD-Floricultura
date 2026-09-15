@@ -31,8 +31,12 @@ Projeto de DS com objetivo de criar um sistema para um comércio
   </tr>
 </table>
 
+# Situação-Problema
+Uma nova floricultura foi inaugurada na Avenida da Águia de haia, porém, no início de suas atividades, a loja não possuía nenhum sistema informatizado para realizar o controle de seus produtos, clientes e vendas. 
+
 # Proposta
-Desenvolver um sistema com Java e MySQL de uma floricultura para facilitar o registro e o cadastro de produtos, vendas, e clientes
+Criar um sistema que facilite o gerenciamento da floricultura, substituindo os registros manuais por uma solução digital. Dessa forma, será possível organizar melhor os produtos, controlar o estoque, cadastrar clientes e registrar vendas com mais rapidez e segurança.    
+Com o sistema, a floricultura poderá ter maior controle sobre suas operações e reduzir problemas causados pela falta de organização das informações. 
 
 # Escopo do sistema
 ## Funcionalidades presentes
